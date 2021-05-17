@@ -6,99 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
     <title>Swall</title>
-    <style>
-      body {
-          font-family: Arial;
-          text-align: center;
-        }
-  
-      input {
-          float: left;
-          width: 200px;
-          margin-bottom: 10px;
-      }
-  
-      label {
-          clear: both;
-          float: left;
-          width: 180px;
-      }
-  
-      button {
-          clear: both;
-          float: left;
-          width: 50px;
-      }
-  
-      .error-control {
-          border: 1px solid red;
-      }
-  
-      label.error {
-          color: red;
-          width: 300px;
-          font-size: 0.8em;
-          margin-top: -5px;
-          margin-bottom: 10px;
-      }
-      
-      #caja{
-          margin-top:50px;
-          margin-left:20px;
-     
-      }
-  
-  
-    </style>
-    <script>
-      $(function() 
-      {
-        $("#mi-formulario").validate({
-             rules: {
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    password: "required",
-                    fono: "required",
-                    fecha: "required",
-                    password2: {
-                        required: true,
-                        equalTo: "#password"
-                    }   
-                    
-                }, //rules
-            messages: {
-                email: {
-                    required: 'Ingresa tu correo electrónico',
-                    email: 'Formato de correo no válido'
-                },
-                password: {
-                    required: 'Ingresa una contraseña',
-                    minlength: 'Caracteres insuficientes'
-                },
-                fono:{
-                    required: 'Ingrese un número de celular',
-                    minlength: 'Cantidad de digitos insuficiente'
-                },
-                fecha:{
-                    required: 'Seleccione una fecha válida',
-                    min: 'Fecha no corresponde'
-                },
-                password2: {
-                    required: 'Reingresa la contraseña',
-                    equalTo: 'Las contraseñas ingresadas no coinciden',
-                    minlength: 'Caracteres insuficientes'
-
-                }
-            }//messages
-        }); //$('#mi-formulario').validate
-    }); //function
-
-  </script>
 
 </head>
 <body>
@@ -141,28 +49,43 @@
          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!--******************************************************-->     
-    <h1 style="text-align: center;">Registro</h1>
-    <hr>
-    <div class="centrar" style="text-align: justify;"  id="caja">
-    <form id="mi-formulario" method="post" action="index.html">
-        <label>Correo Electrónico: </label>
-        <input type="text" name="email" required placeholder="nombre@dominio.com">
-        <label>Telefono: </label>
-        <input type="text" name="fono" minlength="9" required>
-      
-        <label>Fecha: </label>
-        <input type="date" name="fecha" min="1810-01-01" required>
+        <div class="position-estatic overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+          <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 fw-normal">Quienes Somos</h1>
+            <p class="lead fw-normal">Swall
+              es una página web que va dirigida a toda persona que gusta de los debates, discusiones, temas de conversación variados.                
+              
+                             
+             El fin (y visión de la página web) es poder compartir tú opinión del tema que gustes con las demás personas del mundo, de una manera rápida y llamativa.
+                         
+             La misión de nuestro grupo de trabajo es poder informar de todos los temas que son la novedad del momento y poder compartir esa información con los demás usuarios.  </p>
+             <iframe width="450" height="350" src="https://www.youtube.com/embed/kb6tSD9n8Xg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             <script>
+               function Mover(obj)
+                {
+                    obj.innerHTML="Si un mensaje es personal o privado, no es prudente que publicite su contenido. Un mensaje en la mensajería interna (salvo que sea grupal) es un mensaje privado.";
+                    obj.style.background="yellow";
+                    
+                }
 
-        <label>Contraseña:</label>
-        <input type="password" id="password" name="password" minlength="6">
-      
-        <label>Reingresa contraseña: </label>
-        <input type="password" name="password2" minlength="6">
-      
-        <button style="color: rgb(255, 255, 255); align-self: auto;" type="submit" class="boton" btn >ir</button>
-      </form>     
-    </div>
-    <div class="centrar" style="text-align: justify;"  id="caja"></div>
+                function MoverFuera(obj)
+                {
+                    obj.innerHTML="Mueve el mouse sobre la caja para consejos sobre un foro!";
+                    obj.style.background= "red";
+                    
+                }
+                </script>
+                <h2> </h2>
+                <div onmouseover="Mover(this)" onmouseout="MoverFuera(this)"
+                    style= "background-color: red; width: 450px; height: 170px;  
+                    padding: 30px;">
+                    Mueve el mouse sobre la caja para consejos sobre un foro!
+                </div>
+              </div>
+          </div>
+          <div class="product-device shadow-sm d-none d-md-block"></div>
+          <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+        </div>
         <footer id="fh5co-footer" class="fh5co-bg" role="contentinfo">
           <div class="overlay"></div>
           <div class="container">
@@ -188,9 +111,6 @@
               </div>
             </div>
           </div>
-        </footer>
-      
-        
-    
+        </footer>   
 </body>
 </html>
